@@ -21,33 +21,14 @@ function clearScreen(){
 
 }
 
-class Cars { 
+function backspace(){
 
-    constructor(name, maker, price) { 
+    let x = document.getElementById('result').value
 
-      this.name = name; 
+    let y = x.slice(0, x.length - 1)
 
-      this.maker =  maker; 
+    document.getElementById('result').value = y
 
-      this.price = price; 
+    return y
 
-    } 
-
-    getDetails(){ 
-
-        return (`The name of the car is ${this.name}.`) 
-
-    } 
-
-  } 
-
-  let car1 = new Cars('Rolls Royce Ghost', 'Rolls Royce', '$315K'); 
-
-  let car2 = new Cars('Mercedes AMG One', 'Mercedes', '$2700K'); 
-
-  console.log(car1.name);     
-
-  console.log(car2.maker);   
-
-  console.log(car1.getDetails()); 
-
+}
